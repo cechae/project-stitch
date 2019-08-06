@@ -29,7 +29,7 @@ export default function TodoList(props) {
 const NoTodoItems = props => {
   const Layout = styled.div`
     text-align: center;
-    font-size: 2em;
+    font-size: 1.5em;
     padding-top: 60px;
     padding-bottom: 60px;
   `;
@@ -46,7 +46,7 @@ const NoTodoItems = props => {
         </span>
       ) : (
         <span>
-          Enter some text and click <strong>Add</strong> to save your first
+          Enter some text and hit <strong>return</strong> to save your first
           to-do task
         </span>
       )}
@@ -56,5 +56,4 @@ const NoTodoItems = props => {
 const List = styled.ul`
   padding: 0;
   margin-top: 10px;
-  width: 450px;
 `;

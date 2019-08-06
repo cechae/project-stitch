@@ -2,9 +2,10 @@ import React from "react";
 import styled from "@emotion/styled";
 import ErrorBoundary from "react-error-boundary";
 import { useStitchAuth } from "./StitchAuth";
-import { Card, CardBody, Button } from "reactstrap";
+import { Card, CardBody } from "reactstrap";
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import './Login.css';
+import Button from 'react-bootstrap/Button'
 
 
 Login.propTypes = {};
@@ -13,22 +14,22 @@ export default function Login() {
   return (
     <ErrorBoundary>
       <Layout>
-        <LoginCard>
-          <CardBody>
+        <LoginCard className="cardBody">
+          <CardBody >
             <ButtonRow>
-              <Jumbotron>
-              <h1>Welcome to To-Do World.</h1>
+              <Jumbotron className="jumbotron">
+              <h1>Welcome to To-Do!</h1>
                 <div className="login-container">
                   <div>
-                  <LoginButton provider="anonymous" onClick={() => actions.handleLogin("anonymous")}>
+                  <Button variant="outline-dark" className="login-btn" provider="anonymous" onClick={() => actions.handleLogin("anonymous")}>
                     Log In as Anonymous
-                  </LoginButton>
+                  </Button>
                   </div>
 
                   <div>
-                  <LoginButton provider="google" onClick={() => actions.handleLogin("google")}>
+                  <Button variant="outline-dark" className="login-btn" provider="google" onClick={() => actions.handleLogin("google")}>
                     Log In with Google
-                  </LoginButton>
+                  </Button>
                   </div>
                   
                 </div>
@@ -52,9 +53,9 @@ const LoginCard = styled(Card)`
   margin-right: auto;
   max-width: 450px;
 `;
-const LoginButton = styled(Button)`
-  margin-top: 10px;
-`;
+// const LoginButton = styled(Button)`
+//   margin-top: 10px;
+// `;
 const ButtonRow = styled.div`
   display: flex;
   flex-direction: column;

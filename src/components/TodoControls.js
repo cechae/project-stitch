@@ -55,7 +55,7 @@ const Layout = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 450px;
+  
 `;
 const ControlBar = styled.div`
   width: 100%;

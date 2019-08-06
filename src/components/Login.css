@@ -1,4 +1,22 @@
 .login-container {
     display: flex;
     flex-direction: column;
+    text-align: center;
+}
+.cardBody {
+    background-color: transparent !important;
+    border: none !important;
+}
+.jumbotron {
+    background-color: #fff !important;
+    -moz-box-shadow:2px 2px 2px 2px #ccc;
+    -webkit-box-shadow: 2px 2px 2px 2px #ccc;
+    box-shadow: 2px 2px 2px 2px #ccc;
+    
+}
+.jumbotron h1 {
+    margin-bottom: 2rem;
+}
+.login-btn {
+    margin-bottom: 3%;
 }

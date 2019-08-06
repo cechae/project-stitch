@@ -21,6 +21,7 @@ export function useStitchAuth() {
   if (!context) {
     throw new Error(`useStitchAuth must be used within a StitchAuthProvider`);
   }
+  console.log(context);
   return context;
 }
 
@@ -40,6 +41,7 @@ export function StitchAuthProvider(props) {
             isLoggedIn: true,
             currentUser: loggedInUser,
             }));
+            
         }
         },
         onUserLoggedOut: (auth, loggedOutUser) => {

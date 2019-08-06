@@ -16,14 +16,15 @@ TodoApp.propTypes = {};
 export default function TodoApp() {
   const { currentUser } = useStitchAuth();
   const todo = useTodoItems(currentUser.id);
+  console.log(todo)
   // const { items, hasHadTodos, actions } = useTodoItems(currentUser.id);
   return (
     <ErrorBoundary>
       <div className="todo-container">
         
-          <div className="sidebar">
+          {/* <div className="sidebar">
 
-          </div>
+          </div> */}
           <div className="card-container">
             <TodoControls {...todo} />
             <TodoList {...todo} />
