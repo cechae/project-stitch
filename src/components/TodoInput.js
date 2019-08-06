@@ -14,19 +14,22 @@ export default function TodoInput(props) {
       <TextInput
         {...inputProps}
         type="text"
-        placeholder="What Do You Need To Do?"
+        placeholder="Add To-Do"
+        action={props.addTodo}
       />
-      <ActionButton action={props.addTodo}>Add To-Do</ActionButton>
+
+      {/* <ActionButton action={props.addTodo}>Add To-Do</ActionButton> */}
     </Container>
   );
 }
 const Container = styled(InputGroup)`
   width: 100%;
 `;
-const TextInput = styled(Input)`
-  height: 70px !important;
-  background-color: white;
+const TextInput = styled(Input)` //Add To-Do
+  height: 60px !important;
+  
   box-sizing: border-box;
+  color: white;
   padding-left: 20px;
   padding-right: 20px;
   line-height: 40px;
@@ -42,6 +45,7 @@ const ActionButton = props => {
         color="info"
         onClick={props.action}
         disabled={props.disabled}
+        
       >
         <Text>{props.children}</Text>
       </InputButton>
@@ -49,5 +53,5 @@ const ActionButton = props => {
   );
 };
 const InputButton = styled(Button)`
-  background-color: #5e9668 !important;
+  
 `;

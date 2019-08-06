@@ -1,0 +1,51 @@
+
+body {
+    background-image: url("./color.jpg");
+    background-size: cover;
+}
+.layout {
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.todo-container {
+    display: flex;
+    padding: 5% 5%;
+}
+.card-container{
+    padding: 5% 5%;
+    background-color: #fff;
+    border-radius: 15px;
+  max-width: 600px;
+  align-items: center;
+  width: 100%;
+}
+.sidebar {
+    padding: 5% 5%;
+    border-radius: 15px;
+    background-color: #fff;
+    max-width: 600px;
+    -webkit-align-items: center;
+    align-items: center;
+    width: 100%;
+}
+.list {
+    position: relative;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+.img-container .penguin-img {
+    width: 100px;
+    height: auto;
+}

@@ -8,6 +8,9 @@ import TodoControls from "./TodoControls";
 import { useStitchAuth } from "./StitchAuth";
 import { useTodoItems } from "./useTodoItems";
 import { Card, CardTitle } from "reactstrap";
+import "./TodoApp.css";
+import pic1 from './pic1.jpg';
+import color from './color.jpg';
 
 TodoApp.propTypes = {};
 export default function TodoApp() {
@@ -16,36 +19,36 @@ export default function TodoApp() {
   // const { items, hasHadTodos, actions } = useTodoItems(currentUser.id);
   return (
     <ErrorBoundary>
-      <Layout>
-        <TodoCard>
-          <Title>
-            <h1>Your To-Do List</h1>
-          </Title>
-          <TodoControls {...todo} />
-          <TodoList {...todo} />
-        </TodoCard>
-      </Layout>
+      <div className="todo-container">
+        
+          <div className="sidebar">
+
+          </div>
+          <div className="card-container">
+            <TodoControls {...todo} />
+            <TodoList {...todo} />
+          </div>
+
+          <div className="img-container">
+            {/* <img className="penguin-img" src={color} alt="penguin img"></img> */}
+          </div>
+
+
+      </div>
     </ErrorBoundary>
   );
 }
-const Layout = styled.div`
-  background: #eeeeee;
-  padding: 20px;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-const TodoCard = styled(Card)`
-  max-width: 600px;
-  align-items: center;
-  width: 100%;
-`;
-const Title = styled(CardTitle)`
-  margin: 0;
-  h1 {
-    padding: 20px;
-    margin: 0;
-  }
-`;
+// const Layout = styled.div`
+//   padding: 20px;
+//   height: 100%;
+//   width: 100%;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// `; 
+// const TodoCard = styled(Card)` //div="card-container"
+//   background-color: #4B0082;
+//   max-width: 600px;
+//   align-items: center;
+//   width: 100%;
+// `;

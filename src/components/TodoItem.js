@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import styled from "@emotion/styled";
 import { CheckedIcon, UncheckedIcon } from "./Icon";
 import { Card, CardBody } from "reactstrap";
+// import Card from 'react-bootstrap/Card';
 
 TodoItem.propTypes = {
   item: PropTypes.object,
@@ -15,9 +16,9 @@ export default function TodoItem(props) {
   const Checkbox = item.checked ? CheckedIcon : UncheckedIcon;
   return (
     <Todo onClick={toggleStatus}>
-      <Layout>
+      <Layout className="layout">
         <Checkbox />
-        <Text>{item.task}</Text>
+        <div className="text" style={{marginLeft: '2%'}}>{item.task}</div>
       </Layout>
     </Todo>
   );
@@ -29,13 +30,7 @@ const Todo = styled(Card)`
   }
 `;
 const Layout = styled(CardBody)`
-  display: flex;
+  
   align-items: top;
   padding: 10px !important;
-`;
-const Text = styled.span`
-  font-size: 18px;
-  line-height: 24px;
-  margin-left: 10px;
-  max-width: calc(100% - 24px - 10px);
 `;

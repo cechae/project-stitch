@@ -69,7 +69,8 @@ const CleanupButton = styled(Button)`
 `;
 const SelectAllButton = props => {
   const Selector = styled(Button)`
-    color: black;
+    color: white;
+    background-color: #8B008B;
     border: 0.5px solid rgba(0, 0, 0, 0.6) !important;
     margin-right: 8px;
   `;
